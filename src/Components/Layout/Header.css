@@ -39,3 +39,8 @@
     align-items: center;
     justify-content: center;
 }
+.header_img{
+    background-image: url(../../Images/header_img.jpg);
+    height: 300px;
+    width: 100%;
+}

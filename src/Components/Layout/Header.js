@@ -1,13 +1,18 @@
-import React from 'react'
-import Navbar from './Navbar';
-import HeaderImage from './HeaderImage';
+import React from 'react';
+import "./Header.css";
 
 const Header = () => {
     return (
-        <React.Fragment>
-            <Navbar />
-            <HeaderImage />
-        </React.Fragment>
+        <header>
+            <nav className='navbar'>
+                <h1>FoodPlaza</h1>
+                <button>
+                    <p>Your Cart</p>
+                    <div>0</div>
+                </button>
+            </nav>
+            <div className="header_img"></div>
+        </header>
     )
 }
 
