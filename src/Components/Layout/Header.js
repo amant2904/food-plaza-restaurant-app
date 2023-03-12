@@ -1,17 +1,18 @@
 import React from 'react';
 import "./Header.css";
+import headerImage from "../../assets/header_img.jpg";
+import CartButton from './CartButton';
 
 const Header = () => {
     return (
         <header>
             <nav className='navbar'>
                 <h1>FoodPlaza</h1>
-                <button>
-                    <p>Your Cart</p>
-                    <div>0</div>
-                </button>
+                <CartButton />
             </nav>
-            <div className="header_img"></div>
+            <div>
+                <img src={headerImage} alt="Delicious Dishes" />
+            </div>
         </header>
     )
 }
