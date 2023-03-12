@@ -1,0 +1,41 @@
+.navbar{
+    display: flex;
+    padding: 10px 200px;
+    justify-content: space-between;
+    align-items: center;  
+    background-color: #862626;
+    height: 80px;
+    position: sticky;
+    top: 0;
+}
+.navbar h1{
+    color: white;
+    font-size: 40px;
+}
+.navbar button{
+    padding: 14px 70px;
+    border-radius: 18px;
+    background-color: #4a0606;
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+.navbar button p{
+    margin: 0px 10px 0px 0px;
+    font-size: 22px;
+}
+.navbar button div{
+    background-color: #d10a0a;
+    padding: 5px 12px;
+    border-radius: 12px;
+    text-align: center;
+    margin: 0px 0px 0px 6px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
