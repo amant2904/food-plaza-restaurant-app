@@ -18,6 +18,12 @@ const CartBox = (props) => {
         return currNumb + (parseFloat(item.amount) * parseFloat(item.price));
     }, 0)
 
+    const reduceAmount_handler = (e) => {
+        e.preventDefault();
+        let itemId = e.target.parentElement.previousElementSibling.firstElementChild.textContent;
+        cartCtx.removeCartItemHandler(itemId);
+    }
+
     return (
         <div className={classes.cartBox}>
             <div className={classes.items}>
@@ -25,6 +31,7 @@ const CartBox = (props) => {
                     {cartCtx.items.length === 0 ? <p>No items yet</p> : cartCtx.items.map((item) => {
                         return <li key={item.id} className={classes.cartItem}>
                             <div>
+                                <h4 hidden>{item.id}</h4>
                                 <h4 className={classes.itemName}>{item.name}</h4>
                                 <div className={classes.priceAndAmount}>
                                     <h4 className={classes.price}>${item.price}</h4>
@@ -32,7 +39,8 @@ const CartBox = (props) => {
                                 </div>
                             </div>
                             <div>
-                                lkjflkjf
+                                <Button className={classes.changeAmountBtn} onClick={reduceAmount_handler}>-</Button>
+                                <Button className={classes.changeAmountBtn} >+</Button>
                             </div>
                         </li>
                     })}

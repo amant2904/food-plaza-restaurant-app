@@ -8,7 +8,7 @@
     z-index: 50;
 }
 .cartBox{
-    width: 70%;
+    width: 45%;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -86,6 +86,10 @@
     cursor: pointer;
     font-size: 18px;
 }
+.cancelBtn:hover{
+    background-color: #6d0e0e;
+    color: white;
+}
 .orderBtn{
     margin: 0px 5px;
     padding: 9px 16px;
@@ -96,4 +100,17 @@
     background-color: #6d0e0e;
     cursor: pointer;
     font-size: 18px;
+}
+.changeAmountBtn{
+    padding: 3px 13px;
+    margin: 0px 6px;
+    font-size: 20px;
+    font-weight: bolder;
+    color: #770404;
+    border: 1px solid #550606;
+    cursor: pointer;
+}
+.changeAmountBtn:hover{
+    background-color: #550606;
+    color: white;
 }

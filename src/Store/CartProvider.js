@@ -4,7 +4,7 @@ import CartContext from './Cart-context'
 const itemListReducer = (state, action) => {
     if (action.type === "add") {
         let checkExistingIndex = state.items.findIndex((item) => {
-            return item.id === action.newItem.id
+            return item.id === action.newItem.id;
         })
         if (checkExistingIndex === -1) {
             return { items: [...state.items, action.newItem] }
@@ -12,6 +12,20 @@ const itemListReducer = (state, action) => {
         else {
             let newAmount = state.items[checkExistingIndex].amount + action.newItem.amount;
             state.items[checkExistingIndex].amount = newAmount;
+            return { items: state.items };
+        }
+    }
+    else if (action.type === "remove") {
+        let checkExistingIndex = state.items.findIndex((item) => {
+            return item.id === action.itemId;
+        })
+        if (state.items[checkExistingIndex].amount === 1) {
+            state.items.splice(checkExistingIndex, 1);
+            return { items: state.items };
+        }
+        else {
+            let currAmount = state.items[checkExistingIndex].amount;
+            state.items[checkExistingIndex].amount = currAmount - 1;
             return { items: state.items };
         }
     }
@@ -29,8 +43,8 @@ export default function CartProvider(props) {
         dispatchItemList({ type: "add", newItem: obj })
     }
 
-    const removeCartItem_Handler = () => {
-
+    const removeCartItem_Handler = (id) => {
+        dispatchItemList({ type: "remove", itemId: id })
     }
 
     const context = {
