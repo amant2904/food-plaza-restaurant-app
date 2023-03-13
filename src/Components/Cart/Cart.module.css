@@ -1,0 +1,61 @@
+.backdrop{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(2, 2, 2, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.cartBox{
+    width: 40%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 11px 22px;
+    border-radius: 31px;
+    overflow: hidden;
+}
+.total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0px;    
+}
+.total h4{
+    margin: 0px;
+    font-size: 25px;
+}
+.totalPrice{
+    color: rgb(96, 11, 11);
+}
+.btns{
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.cancelBtn{
+    margin: 0px 5px;
+    padding: 9px 16px;
+    border-radius: 15px;
+    border: 1px solid #640808;
+    color: #670c0c;
+    font-weight: bold;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 18px;
+}
+.orderBtn{
+    margin: 0px 5px;
+    padding: 9px 16px;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    background-color: #6d0e0e;
+    cursor: pointer;
+    font-size: 18px;
+}
