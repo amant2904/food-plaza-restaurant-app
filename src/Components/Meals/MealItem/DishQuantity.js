@@ -1,9 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Button from '../../UI/Button'
 import classes from "./DishQuantity.module.css"
 import Input from '../../UI/Input';
+import CartContext from '../../../Store/Cart-context';
+
 
 export default function DishQuantity() {
+    const cartCtx = useContext(CartContext);
+
     const [quantity, setQuantity] = useState(1);
     const quantity_handler = (e) => {
         setQuantity(e.target.value);
@@ -11,6 +15,15 @@ export default function DishQuantity() {
 
     const quantityAdding_handler = (e) => {
         e.preventDefault();
+        const itemName = e.target.parentElement.parentElement.firstElementChild.firstElementChild.textContent;
+        const itemPrice = e.target.parentElement.parentElement.firstElementChild.lastElementChild.textContent.slice(1);
+
+        cartCtx.addCartItemHandler({
+            id: Math.random(),
+            name: itemName,
+            amount: quantity,
+            price: itemPrice
+        })
     }
     return (
         <form className={classes.quantityForm} onSubmit={quantityAdding_handler}>
