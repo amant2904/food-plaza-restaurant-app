@@ -24,6 +24,11 @@ const CartBox = (props) => {
         cartCtx.removeCartItemHandler(itemId);
     }
 
+    const increaseAmount_handler = (e) => {
+        e.preventDefault();
+        let itemId = e.target.parentElement.previousElementSibling.firstElementChild.textContent;
+        cartCtx.addCartItemHandler(itemId);
+    }
     return (
         <div className={classes.cartBox}>
             <div className={classes.items}>
@@ -40,7 +45,7 @@ const CartBox = (props) => {
                             </div>
                             <div>
                                 <Button className={classes.changeAmountBtn} onClick={reduceAmount_handler}>-</Button>
-                                <Button className={classes.changeAmountBtn} >+</Button>
+                                <Button className={classes.changeAmountBtn} onClick={increaseAmount_handler}>+</Button>
                             </div>
                         </li>
                     })}

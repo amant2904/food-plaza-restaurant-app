@@ -29,6 +29,14 @@ const itemListReducer = (state, action) => {
             return { items: state.items };
         }
     }
+    else if (action.type === "increase") {
+        let checkExistingIndex = state.items.findIndex((item) => {
+            return item.id === action.itemId;
+        })
+        let currAmount = state.items[checkExistingIndex].amount;
+        state.items[checkExistingIndex].amount = currAmount + 1;
+        return { items: state.items }
+    }
     return {
         items: []
     }
@@ -39,8 +47,13 @@ export default function CartProvider(props) {
         items: []
     });
 
-    const addCartItem_Handler = (obj) => {
-        dispatchItemList({ type: "add", newItem: obj })
+    const addCartItem_Handler = (entry) => {
+        if (typeof (entry) === "object") {
+            dispatchItemList({ type: "add", newItem: entry })
+        }
+        else {
+            dispatchItemList({ type: "increase", itemId: entry })
+        }
     }
 
     const removeCartItem_Handler = (id) => {
