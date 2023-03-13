@@ -1,5 +1,5 @@
 button{
-    padding: 14px 70px;
+    padding: 10px 53px;
     border-radius: 18px;
     background-color: #4a0606;
     border: none;
@@ -21,6 +21,7 @@ button{
     text-align: center;
     margin: 0px 0px 0px 6px;
     font-size: 18px;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     justify-content: center;

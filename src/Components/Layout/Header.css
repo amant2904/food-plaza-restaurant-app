@@ -4,13 +4,15 @@
     justify-content: space-between;
     align-items: center;  
     background-color: #862626;
-    height: 80px;
+    height: 70px;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 .navbar h1{
     color: white;
-    font-size: 40px;
+    font-size: 35px;
+    margin: 0px;
 }
 header div img{
     height: 300px;
