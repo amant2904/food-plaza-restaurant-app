@@ -1,7 +1,7 @@
 import React from 'react'
-import classes from "./Summary.module.css"
+import classes from "./MealsSummary.module.css"
 
-function Summary() {
+export default function MealsSummary() {
     return (
         <div className={classes.summary}>
             <h2>Delicious Food, Delivered To You</h2>
@@ -10,5 +10,3 @@ function Summary() {
         </div>
     )
 }
-
-export default Summary;
