@@ -31,9 +31,11 @@ export default function AvailableMeals() {
 
     return (
         <div className={classes.availableMeals}>
-            {dishes.map((dish) => {
-                return <SpecificDish key={Math.random()} name={dish.name} descr={dish.descr} price={dish.price} />
-            })}
+            <ul>
+                {dishes.map((dish) => {
+                    return <SpecificDish key={Math.random()} name={dish.name} descr={dish.descr} price={dish.price} />
+                })}
+            </ul>
         </div>
     )
 }
