@@ -18,7 +18,7 @@ function App() {
 
   return (
     <CartProvider>
-      {showCart && <Cart cartClose={cartClose_handler} totalPrice="45.99" />}
+      {showCart && <Cart cartClose={cartClose_handler} />}
       <Header cartBtn_handler={cartBtn_handler} />
       <Meals />
     </CartProvider>
