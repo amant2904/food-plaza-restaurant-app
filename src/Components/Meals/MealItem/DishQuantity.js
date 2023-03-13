@@ -4,7 +4,7 @@ import classes from "./DishQuantity.module.css"
 import Input from '../../UI/Input';
 
 export default function DishQuantity() {
-    const [quantity, setQuantity] = useState(0);
+    const [quantity, setQuantity] = useState(1);
     const quantity_handler = (e) => {
         setQuantity(e.target.value);
     }
