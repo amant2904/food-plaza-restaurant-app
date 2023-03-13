@@ -4,7 +4,7 @@ import Card from '../UI/Card'
 import classes from "./Cart.module.css";
 import Button from "../UI/Button"
 
-const Cart = () => {
+const CartBox = (props) => {
     const cartItems = [{
         id: "itm1",
         name: "Sushi",
@@ -29,10 +29,10 @@ const Cart = () => {
                 </div>
                 <div className={classes.total}>
                     <h4>Total Amount</h4>
-                    <h4 className={classes.totalPrice}>$45.67</h4>
+                    <h4 className={classes.totalPrice}>$45.99</h4>
                 </div>
                 <div className={classes.btns}>
-                    <Button className={classes.cancelBtn}>Cancel</Button>
+                    <Button className={classes.cancelBtn} onClick={props.cartClose}>Cancel</Button>
                     <Button className={classes.orderBtn}>Order</Button>
                 </div>
             </div>
@@ -40,10 +40,10 @@ const Cart = () => {
     )
 }
 
-export default function CartBox() {
+export default function Cart(props) {
     return (
         <React.Fragment>
-            {ReactDOM.createPortal(<Cart />, document.getElementById("cart"))}
+            {ReactDOM.createPortal(<CartBox cartClose={props.cartClose} />, document.getElementById("cart"))}
         </React.Fragment>
     )
 

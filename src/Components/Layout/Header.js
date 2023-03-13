@@ -3,12 +3,12 @@ import "./Header.css";
 import headerImage from "../../assets/header_img.jpg";
 import CartButton from './CartButton';
 
-const Header = () => {
+const Header = (props) => {
     return (
         <header>
             <nav className='navbar'>
                 <h1>FoodPlaza</h1>
-                <CartButton />
+                <CartButton cartBtn_handler={props.cartBtn_handler} />
             </nav>
             <div>
                 <img src={headerImage} alt="Delicious Dishes" />
