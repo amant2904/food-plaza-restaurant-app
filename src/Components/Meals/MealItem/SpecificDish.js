@@ -9,6 +9,7 @@ export default function SpecificDish(props) {
                 <div>
                     <h3 className={classes.dishName}>{props.name}</h3>
                     <p className={classes.descr}>{props.descr}</p>
+                    <p hidden>{props.id}</p>
                     <p className={classes.price}>${props.price}</p>
                 </div>
                 <div>

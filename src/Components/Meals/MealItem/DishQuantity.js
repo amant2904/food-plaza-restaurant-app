@@ -17,11 +17,12 @@ export default function DishQuantity() {
         e.preventDefault();
         const itemName = e.target.parentElement.parentElement.firstElementChild.firstElementChild.textContent;
         const itemPrice = e.target.parentElement.parentElement.firstElementChild.lastElementChild.textContent.slice(1);
+        const itemId = e.target.parentElement.parentElement.firstElementChild.children[2].textContent;
 
         cartCtx.addCartItemHandler({
-            id: Math.random(),
+            id: itemId,
             name: itemName,
-            amount: quantity,
+            amount: parseFloat(quantity),
             price: itemPrice
         })
     }

@@ -22,8 +22,19 @@ const CartBox = (props) => {
         <div className={classes.cartBox}>
             <div className={classes.items}>
                 <ul className={classes.cartItemList}>
-                    {cartCtx.items.map((item) => {
-                        return <li key={item.id} className={classes.cartItem}>{item.name} {item.amount} {(item.price * item.amount).toFixed(2)}</li>
+                    {cartCtx.items.length === 0 ? <p>No items yet</p> : cartCtx.items.map((item) => {
+                        return <li key={item.id} className={classes.cartItem}>
+                            <div>
+                                <h4 className={classes.itemName}>{item.name}</h4>
+                                <div className={classes.priceAndAmount}>
+                                    <h4 className={classes.price}>${item.price}</h4>
+                                    <h4 className={classes.amount}>x {item.amount}</h4>
+                                </div>
+                            </div>
+                            <div>
+                                lkjflkjf
+                            </div>
+                        </li>
                     })}
                 </ul>
             </div>
