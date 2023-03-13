@@ -5,7 +5,8 @@
     align-items: center;  
     background-color: #862626;
     height: 70px;
-    position: sticky;
+    width: 100%;
+    position: fixed;
     top: 0;
     z-index: 10;
 }

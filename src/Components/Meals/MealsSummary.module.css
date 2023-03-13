@@ -1,12 +1,11 @@
 .summary{
-    width: 57%;
-    margin: 0px auto;
+    width: 53%;
+    margin: -126px auto 0px;
     padding: 10px 20px;
     color: white;
     background-color: #3f3f3f;
     box-shadow: 2px 2px 18px 0px #2e2d2d;
     position: relative;
-    top: -142px;
     border-radius: 25px;
     z-index: 1;
 }

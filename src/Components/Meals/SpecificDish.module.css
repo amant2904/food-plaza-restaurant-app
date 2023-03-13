@@ -1,0 +1,17 @@
+.dishName{
+    margin: 5px 0px;
+    font-weight: bold;
+}
+.descr{
+    margin: 0px 0px;
+}
+.price{
+    margin: 7px 0px;
+    color: #860000;
+    font-weight: bolder;
+    font-size: 21px;
+}
+hr{
+    border-color: #ffffff;
+    margin: 16px 0px;
+}
