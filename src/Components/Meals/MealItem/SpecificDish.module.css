@@ -1,5 +1,10 @@
-li{
+.mealItem{
     list-style: none;
+    border-bottom: 1px solid grey;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
 .dishName{
     margin: 5px 0px;
@@ -13,8 +18,4 @@ li{
     color: #860000;
     font-weight: bolder;
     font-size: 21px;
-}
-hr{
-    border-color: #ffffff;
-    margin: 16px 0px;
 }

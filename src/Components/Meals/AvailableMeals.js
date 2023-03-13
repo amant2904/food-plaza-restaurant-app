@@ -1,5 +1,5 @@
 import React from 'react'
-import SpecificDish from './SpecificDish'
+import SpecificDish from './MealItem/SpecificDish'
 import classes from "./AvailableMeals.module.css"
 
 export default function AvailableMeals() {
