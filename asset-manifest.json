@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/food-plaza-restaurant-app/static/css/main.760e2ab8.css",
+    "main.js": "/food-plaza-restaurant-app/static/js/main.a109dec8.js",
+    "static/media/header_img.jpg": "/food-plaza-restaurant-app/static/media/header_img.da47a702a503e77c8e62.jpg",
+    "index.html": "/food-plaza-restaurant-app/index.html",
+    "main.760e2ab8.css.map": "/food-plaza-restaurant-app/static/css/main.760e2ab8.css.map",
+    "main.a109dec8.js.map": "/food-plaza-restaurant-app/static/js/main.a109dec8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.760e2ab8.css",
+    "static/js/main.a109dec8.js"
+  ]
+}
